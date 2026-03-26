@@ -14,7 +14,7 @@ import { ExperienceItem } from './ExperienceItem.jsx'
 export function MainContent() {
     return (
         <>
-            <div className="container">
+            <div className="container" id='home'>
                 <div className="presentation">
                     <img src={iconAvatar} />
                     <h1>Web developer</h1>
@@ -36,7 +36,7 @@ export function MainContent() {
                     </div>
                 </div>
                 <div className="projects">
-                    <h2>Projects</h2>
+                    <h2 id='projects'>Projects</h2>
                     <div className="projects-items">
                         <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
                         <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
@@ -45,7 +45,7 @@ export function MainContent() {
                     </div>
                 </div>
                 <div className="experience">
-                    <h2>Experience</h2>
+                    <h2 id='experience'>Experience</h2>
                     <div className="experience-items">
                         <ExperienceItem
                             title="Prueba"
