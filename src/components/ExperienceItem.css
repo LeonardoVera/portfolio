@@ -1,0 +1,23 @@
+.experience-item-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.experience-item-container:hover {
+    box-shadow: 0 2px 5px rgba(245, 245, 245, 0.1);
+}
+
+.experience-item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-item-header h3 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+}

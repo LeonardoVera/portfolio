@@ -9,6 +9,7 @@ import gastosPreview from '../assets/projectsPreviews/guardian-gastos-preview.pn
 import { Button } from '../components/UI/Button.jsx'
 import { TechItem } from './TechItem.jsx'
 import { ProjectItem } from './ProjectItem.jsx'
+import { ExperienceItem } from './ExperienceItem.jsx'
 
 export function MainContent() {
     return (
@@ -27,20 +28,37 @@ export function MainContent() {
                 <div className="tech-stack">
                     <h2>Tech Stack</h2>
                     <div className="tech-stack-items">
-                        <TechItem icon={htmlIcon}/>
-                        <TechItem icon={cssIcon}/>
-                        <TechItem icon={javascriptIcon}/>
-                        <TechItem icon={reactIcon}/>
-                        <TechItem icon={nodejsIcon}/>
+                        <TechItem icon={htmlIcon} />
+                        <TechItem icon={cssIcon} />
+                        <TechItem icon={javascriptIcon} />
+                        <TechItem icon={reactIcon} />
+                        <TechItem icon={nodejsIcon} />
                     </div>
                 </div>
                 <div className="projects">
                     <h2>Projects</h2>
                     <div className="projects-items">
-                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
-                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
-                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
-                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos" />
+                    </div>
+                </div>
+                <div className="experience">
+                    <h2>Experience</h2>
+                    <div className="experience-items">
+                        <ExperienceItem
+                            title="Prueba"
+                            date="Nov 2019 - Present"
+                            desc="Esto es una prueba" />
+                        <ExperienceItem
+                            title="Prueba"
+                            date="Nov 2019 - Present"
+                            desc="Esto es una prueba" />
+                        <ExperienceItem
+                            title="Prueba"
+                            date="Nov 2019 - Present"
+                            desc="Esto es una prueba" />
                     </div>
                 </div>
             </div>

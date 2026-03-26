@@ -1,5 +1,5 @@
 .container {
-    max-width: 80%;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
 
@@ -65,4 +65,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px
+}
+
+.experience {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.experience h2{
+    text-align: center;
+}
+
+.experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
