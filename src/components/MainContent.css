@@ -1,0 +1,43 @@
+.container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.presentation h1 {
+    text-align: center;
+    font-size: 55px;
+}
+
+.presentation p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 750px;
+}
+
+.presentation img {
+    width: 100%;
+    height: 180px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-direction: row;
+
+    gap: 18px;
+}

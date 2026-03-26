@@ -1,0 +1,20 @@
+button {
+    background-color: #fff;
+    color: #161513;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 21.38px;
+
+    width: 195px;
+    height: 64px;
+
+    border-radius: 50px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #161513;
+    color: #fff;
+    stroke: #fff;
+    stroke-width: 8px;
+}
