@@ -6,6 +6,11 @@ header {
     justify-content: space-evenly;
 }
 
+header img {
+    height: 80px;
+    width: 80px;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: rox;
@@ -15,4 +20,5 @@ header {
 .nav-bar-item {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
 }

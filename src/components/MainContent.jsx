@@ -22,8 +22,8 @@ export function MainContent() {
                         enfocado en el desarrollo Web Full Stack </p>
                 </div>
                 <div className="action-buttons">
-                    <Button text="Get in touch" />
-                    <Button text="Download CV" />
+                    <Button text="Get in touch" link="https://www.linkedin.com/in/leonardovera20" />
+                    <Button text="Download CV" onClick={() => alert("Cooking...")}/>
                 </div>
                 <div className="tech-stack">
                     <h2>Tech Stack</h2>
@@ -48,13 +48,15 @@ export function MainContent() {
                     <h2 id='experience'>Experience</h2>
                     <div className="experience-items">
                         <ExperienceItem
-                            title="Prueba"
-                            date="Nov 2019 - Present"
-                            desc="Esto es una prueba" />
+                            title="Voluntariado IEEE Computer Society"
+                            date="May 2024 - Dic 2024"
+                            desc="Fui encargado de la planeacion y documentacion de proyectos
+                            lo que me aporto enormemente en desarrollar mi capacidad de 
+                            trabajo en equipo." />
                         <ExperienceItem
-                            title="Prueba"
-                            date="Nov 2019 - Present"
-                            desc="Esto es una prueba" />
+                            title="Contratenme"
+                            date="Oct 2003 - ♾️"
+                            desc="Por favor" />
                         <ExperienceItem
                             title="Prueba"
                             date="Nov 2019 - Present"

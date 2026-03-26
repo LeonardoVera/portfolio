@@ -1,4 +1,4 @@
-import iconLogo from '../assets/logo.svg'
+import iconLogo from '../assets/logoWhite.png'
 import './Header.css'
 
 export function Header() {

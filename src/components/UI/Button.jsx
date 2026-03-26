@@ -1,9 +1,11 @@
 import './Button.css'
 
-export function Button({ text, onClick }) {
+export function Button({ text, onClick, link }) {
     return (
-        <button onClick={onClick}>
-            {text}
-        </button>
+        <a href={link} target='_blank'>
+            <button onClick={onClick}>
+                {text}
+            </button>
+        </a>
     )
 }
