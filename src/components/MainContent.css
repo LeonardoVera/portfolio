@@ -56,3 +56,13 @@
     width: 100%;
     gap: 60px;
 }
+
+.projects h2 {
+    text-align: center;
+}
+
+.projects-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px
+}

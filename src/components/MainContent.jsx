@@ -5,8 +5,10 @@ import cssIcon from '../assets/techIcons/css.svg'
 import javascriptIcon from '../assets/techIcons/javascript.svg'
 import reactIcon from '../assets/techIcons/react.svg'
 import nodejsIcon from '../assets/techIcons/nodejs.svg'
+import gastosPreview from '../assets/projectsPreviews/guardian-gastos-preview.png'
 import { Button } from '../components/UI/Button.jsx'
 import { TechItem } from './TechItem.jsx'
+import { ProjectItem } from './ProjectItem.jsx'
 
 export function MainContent() {
     return (
@@ -30,6 +32,15 @@ export function MainContent() {
                         <TechItem icon={javascriptIcon}/>
                         <TechItem icon={reactIcon}/>
                         <TechItem icon={nodejsIcon}/>
+                    </div>
+                </div>
+                <div className="projects">
+                    <h2>Projects</h2>
+                    <div className="projects-items">
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
+                        <ProjectItem preview={gastosPreview} title="Gestor de Gastos"/>
                     </div>
                 </div>
             </div>
