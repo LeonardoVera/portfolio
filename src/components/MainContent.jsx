@@ -1,11 +1,12 @@
 import './MainContent.css'
 import iconAvatar from '../assets/avatar.svg'
 import htmlIcon from '../assets/techIcons/html.svg'
-import cssIcon from '../assets/techIcons/html.svg'
-import javascriptIcon from '../assets/techIcons/html.svg'
-import reactIcon from '../assets/techIcons/html.svg'
-import nodejsIcon from '../assets/techIcons/html.svg'
+import cssIcon from '../assets/techIcons/css.svg'
+import javascriptIcon from '../assets/techIcons/javascript.svg'
+import reactIcon from '../assets/techIcons/react.svg'
+import nodejsIcon from '../assets/techIcons/nodejs.svg'
 import { Button } from '../components/UI/Button.jsx'
+import { TechItem } from './TechItem.jsx'
 
 export function MainContent() {
     return (
@@ -23,6 +24,13 @@ export function MainContent() {
                 </div>
                 <div className="tech-stack">
                     <h2>Tech Stack</h2>
+                    <div className="tech-stack-items">
+                        <TechItem icon={htmlIcon}/>
+                        <TechItem icon={cssIcon}/>
+                        <TechItem icon={javascriptIcon}/>
+                        <TechItem icon={reactIcon}/>
+                        <TechItem icon={nodejsIcon}/>
+                    </div>
                 </div>
             </div>
         </>
