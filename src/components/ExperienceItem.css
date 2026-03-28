@@ -1,7 +1,7 @@
 .experience-item-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: auto;
     border-radius: 15px;
     padding: 0 10px;
     margin: 10px;

@@ -1,7 +1,7 @@
 header {
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -16,7 +16,7 @@ header img {
 
 .nav-bar {
     display: flex;
-    flex-direction: rox;
+    flex-direction: row;
     gap: 35px;
     @media (max-width: 500px) {
         gap:20px;
@@ -30,4 +30,5 @@ header img {
     @media (max-width: 500px) {
         font-size: 12px;
     }
+    width: auto;
 }
