@@ -1,7 +1,7 @@
 import './Footer.css'
 import emailIcon from '../assets/contactIcons/email.svg'
 import linkedinIcon from '../assets/contactIcons/linkedin.svg'
-import githubIcon from '../assets/contactIcons/github.svg'
+import githubIcon from '../assets/techIcons/github.svg'
 
 export function Footer() {
     return (

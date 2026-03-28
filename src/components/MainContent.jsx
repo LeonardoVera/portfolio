@@ -1,5 +1,5 @@
 import './MainContent.css'
-import iconAvatar from '../assets/avatar.jpg'
+import iconAvatar from '../assets/avatar.png'
 import htmlIcon from '../assets/techIcons/html.svg'
 import cssIcon from '../assets/techIcons/css.svg'
 import javascriptIcon from '../assets/techIcons/javascript.svg'
