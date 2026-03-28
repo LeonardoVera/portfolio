@@ -14,7 +14,7 @@ import { Button } from '../components/UI/Button.jsx'
 import { TechItem } from './TechItem.jsx'
 import { ProjectItem } from './ProjectItem.jsx'
 import { ExperienceItem } from './ExperienceItem.jsx'
-import curriculum from '../../public/curriculum.pdf'
+import curriculum from '../assets/curriculum.pdf'
 
 export function MainContent() {
     return (
@@ -28,7 +28,7 @@ export function MainContent() {
                 </div>
                 <div className="action-buttons">
                     <Button text="Get in touch" link="https://www.linkedin.com/in/leonardovera20" />
-                    <Button text="Download CV" link={curriculum} downloadName="curriculum.pdf"/>
+                    <Button text="Download CV" link={curriculum} downloadName="CV Leonardo Vera.pdf"/>
                 </div>
                 <div className="tech-stack">
                     <h2>Tech Stack</h2>

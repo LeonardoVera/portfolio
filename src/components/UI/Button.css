@@ -18,3 +18,11 @@ button:hover {
     stroke: #fff;
     stroke-width: 8px;
 }
+
+@media (max-width: 500px) {
+    button {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
