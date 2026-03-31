@@ -28,6 +28,13 @@
 .presentation h1 {
     text-align: center;
     font-size: 45px;
+    margin: 0;
+    line-height: 1.2;
+}
+.presentation h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 0;
 }
 
 .presentation p {
@@ -88,12 +95,15 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin-top: 20px;
     width: 100%;
+    padding: 0;
+    margin-top: 30px;
 }
 
 .experience h2 {
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .experience-items {
