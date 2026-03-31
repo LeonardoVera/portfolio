@@ -23,7 +23,7 @@ export function MainContent() {
     <>
       <div className="container" id="home">
         <div className="presentation">
-          <img src={iconAvatar} />
+          <img src={me} />
           <h1>Software developer</h1>
           <h2>Leonardo Vera</h2>
           <p>
