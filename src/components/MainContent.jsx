@@ -14,8 +14,8 @@ import { Button } from "../components/UI/Button.jsx";
 import { TechItem } from "./TechItem.jsx";
 import { ProjectItem } from "./ProjectItem.jsx";
 import { ExperienceItem } from "./ExperienceItem.jsx";
-import curriculum from "../assets/curriculum.pdf";
-import me from "../assets/me-icon.jpg";
+import curriculum from "../assets/CV-LeonardoVera.pdf";
+import me from "../assets/me-icon.webp";
 
 export function MainContent() {
   return (
@@ -62,16 +62,37 @@ export function MainContent() {
             <ProjectItem
               preview={gastosPreview}
               title="Gestor de Gastos"
-              link="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
-              description="App desarrollada en react,
-                la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
+              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
+            />
+            <ProjectItem
+              preview={gastosPreview}
+              title="Gestor de Gastos"
+              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
+            />
+            <ProjectItem
+              preview={gastosPreview}
+              title="Gestor de Gastos"
+              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
+            />
+            <ProjectItem
+              preview={gastosPreview}
+              title="Gestor de Gastos"
+              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
             />
             <ProjectItem
               preview={ipLocationPreview}
               title="Localizador via IP address"
-              link="https://ipaddresslocation.netlify.app/"
-              description="App desarrollada en react, la cual realiza una peticion y obtiene datos de geolocalizacion mediante la ip
-              y las muestra en una interfaz amigable."
+              githubLink="https://github.com/LeonardoVera/"
+              liveLink="https://ipaddresslocation.netlify.app/"
+              description="App desarrollada en react, la cual realiza una peticion y obtiene datos de geolocalizacion mediante la ip y las muestra en una interfaz amigable."
             />
           </div>
         </div>
