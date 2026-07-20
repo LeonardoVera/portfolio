@@ -1,5 +1,4 @@
 import "./MainContent.css";
-import iconAvatar from "../assets/avatar.png";
 import htmlIcon from "../assets/techIcons/html.svg";
 import cssIcon from "../assets/techIcons/css.svg";
 import javascriptIcon from "../assets/techIcons/javascript.svg";
@@ -16,7 +15,7 @@ import { TechItem } from "./TechItem.jsx";
 import { ProjectItem } from "./ProjectItem.jsx";
 import { ExperienceItem } from "./ExperienceItem.jsx";
 import curriculum from "../assets/curriculum.pdf";
-import me from '../assets/me.jpeg'
+import me from "../assets/me-icon.jpg";
 
 export function MainContent() {
   return (
