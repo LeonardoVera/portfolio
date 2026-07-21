@@ -70,7 +70,7 @@ export function MainContent() {
               preview={linuxACLDemoPreview}
               title="Linux ACL Manager"
               githubLink="https://github.com/LeonardoVera/ACL-manager"
-              liveLink="https://github.com/LeonardoVera/linux-acl"
+              liveLink="https://github.com/LeonardoVera/ACL-manager"
               description="Aplicación desarrollada en React que facilita la gestión de permisos ACL en sistemas Linux, permitiendo a los usuarios administrar de manera eficiente el acceso a archivos y directorios de forma visual e intuitiva."
             />
             <ProjectItem
