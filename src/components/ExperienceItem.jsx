@@ -5,9 +5,9 @@ export function ExperienceItem({title, date, desc}) {
         <div className="experience-item-container">
             <div className="experience-item-header">
                 <h3>{title}</h3>
-                <small>{date}</small>
+                <span className="experience-date">{date}</span>
             </div>
-            <p>{desc}</p>
+            <p className="experience-desc">{desc}</p>
         </div>
     )
 }

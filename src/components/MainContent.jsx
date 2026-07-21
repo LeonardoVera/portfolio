@@ -1,5 +1,6 @@
 import "./MainContent.css";
-import iconAvatar from "../assets/avatar.png";
+
+// Tecnologies Icons Imports
 import htmlIcon from "../assets/techIcons/html.svg";
 import cssIcon from "../assets/techIcons/css.svg";
 import javascriptIcon from "../assets/techIcons/javascript.svg";
@@ -9,14 +10,19 @@ import figmaIcon from "../assets/techIcons/figma.svg";
 import mysqlIcon from "../assets/techIcons/mysql.svg";
 import gitIcon from "../assets/techIcons/git.svg";
 import githubIcon from "../assets/techIcons/github.svg";
+import nextjsIcon from "../assets/techIcons/nextjs.webp";
+
+// Projects Previews imports
 import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.png";
 import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.png";
+import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.png";
+
 import { Button } from "../components/UI/Button.jsx";
 import { TechItem } from "./TechItem.jsx";
 import { ProjectItem } from "./ProjectItem.jsx";
 import { ExperienceItem } from "./ExperienceItem.jsx";
-import curriculum from "../assets/curriculum.pdf";
-import me from '../assets/me.jpeg'
+import curriculum from "../assets/CV-LeonardoVera.pdf";
+import me from "../assets/me-icon.webp";
 
 export function MainContent() {
   return (
@@ -24,12 +30,11 @@ export function MainContent() {
       <div className="container" id="home">
         <div className="presentation">
           <img src={me} />
-          <h1>Software developer</h1>
+          <h1>Software Engineer</h1>
           <h2>Leonardo Vera</h2>
           <p>
             Estudiante del 7mo ciclo de la carrera de Ingenieria de software
-            enfocado en el desarrollo Web Full Stack y entusiaste en el diseño
-            UI
+            enfocado en el <span className="highlight">desarrollo web full stack</span> y entusiasta del <span className="highlight">diseño UI</span>
           </p>
         </div>
         <div className="action-buttons">
@@ -46,33 +51,41 @@ export function MainContent() {
         <div className="tech-stack">
           <h2>Tech Stack</h2>
           <div className="tech-stack-items">
-            <TechItem icon={htmlIcon} />
-            <TechItem icon={cssIcon} />
-            <TechItem icon={javascriptIcon} />
-            <TechItem icon={gitIcon} />
-            <TechItem icon={githubIcon} />
-            <TechItem icon={mysqlIcon} />
-            <TechItem icon={reactIcon} />
-            <TechItem icon={nodejsIcon} />
-            <TechItem icon={figmaIcon} />
+            <TechItem icon={htmlIcon} name="HTML" />
+            <TechItem icon={cssIcon} name="CSS" />
+            <TechItem icon={javascriptIcon} name="JavaScript" />
+            <TechItem icon={reactIcon} name="React" />
+            <TechItem icon={nextjsIcon} name="Next.js" />
+            <TechItem icon={nodejsIcon} name="Node.js" />
+            <TechItem icon={gitIcon} name="Git" />
+            <TechItem icon={githubIcon} name="GitHub" />
+            <TechItem icon={mysqlIcon} name="MySQL" />
+            <TechItem icon={figmaIcon} name="Figma" />
           </div>
         </div>
         <div className="projects">
           <h2 id="projects">Projects</h2>
           <div className="projects-items">
             <ProjectItem
-              preview={gastosPreview}
-              title="Gestor de Gastos"
-              link="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
-              description="App desarrollada en react,
-                la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
+              preview={linuxACLDemoPreview}
+              title="Linux ACL Manager"
+              githubLink="https://github.com/LeonardoVera/ACL-manager"
+              liveLink="https://github.com/LeonardoVera/linux-acl"
+              description="Aplicación desarrollada en React que facilita la gestión de permisos ACL en sistemas Linux, permitiendo a los usuarios administrar de manera eficiente el acceso a archivos y directorios de forma visual e intuitiva."
             />
             <ProjectItem
               preview={ipLocationPreview}
               title="Localizador via IP address"
-              link="https://ipaddresslocation.netlify.app/"
-              description="App desarrollada en react, la cual realiza una peticion y obtiene datos de geolocalizacion mediante la ip
-              y las muestra en una interfaz amigable."
+              githubLink="https://github.com/LeonardoVera/"
+              liveLink="https://ipaddresslocation.netlify.app/"
+              description="App desarrollada en react, la cual realiza una peticion y obtiene datos de geolocalizacion mediante la ip y las muestra en una interfaz amigable."
+            />
+            <ProjectItem
+              preview={gastosPreview}
+              title="Gestor de Gastos"
+              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
             />
           </div>
         </div>
@@ -85,6 +98,12 @@ export function MainContent() {
               desc="Fui encargado de la planeacion y documentacion de proyectos
                             lo que me aporto enormemente en desarrollar mi capacidad de 
                             trabajo en equipo."
+            />
+            <ExperienceItem
+              title="Voluntariado en Soporte y Mantenimiento Tecnologico"
+              date="Ago 2025 - Dic 2025"
+              desc="Participe como organizacor en el Proyecto dee Responsabilidad Social de la UNMSM, enfocado en el
+              fortalecimiento de la infraestructura tecnologica de la I.E. 1148 Juana Infantes Vera"
             />
           </div>
         </div>

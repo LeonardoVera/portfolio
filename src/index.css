@@ -23,10 +23,12 @@ html{
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   margin: 0;
+  padding-top: 80px;
 }
 h1 {
   color: var(--text-h);

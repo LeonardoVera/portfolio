@@ -1,48 +1,111 @@
 footer {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    background-color: #191919;
+    background-color: #111111;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     align-items: center;
+    padding: 30px 0;
+    width: 100%;
 }
 
 .content {
     width: 60%;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 
-    @media (max-width: 500px) {
+    @media (max-width: 768px) {
         width: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
     }
 }
 
-.content h2 {
-    color: #fff;
-}
-
-.email-items {
+.footer-info {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.footer-info h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.footer-info p {
+    color: #9ca3af;
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .email-item {
     display: flex;
     gap: 10px;
     align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.email-item:hover {
+    transform: translateX(4px);
 }
 
 .email-item img {
-    height: 25px;
-    width: 25px;
+    height: 18px;
+    width: 18px;
+}
+
+.email-item span {
+    color: #d1d5db;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.email-item:hover span {
+    color: #f9c441;
 }
 
 .social-items {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.social-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.social-item:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .social-item img {
-    height: 50px;
-    width: 50px;
+    height: 18px;
+    width: 18px;
+    display: block;
 }

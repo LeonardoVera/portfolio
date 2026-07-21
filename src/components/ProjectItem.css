@@ -4,48 +4,61 @@
   padding: 0;
   margin: 0;
   width: 100%;
+  max-width: 480px; /* limits size on large screens */
+  background: #1e1d1b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+              border-color 0.4s ease;
 
   @media (max-width: 590px) {
-    width: 60%;
+    max-width: 100%;
   } 
 }
 
-.project-item-container img {
-  width: 390px;
-  height: 235px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+.project-item-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-.project-item-container a {
-  padding: 0;
-  margin: 0;
-  display: block;
-  text-decoration: none;
+.project-image-wrapper {
   width: 100%;
+  height: 235px;
+  overflow: hidden;
+  position: relative;
 }
 
-.project-item-container p {
-    max-width: 100%;
+.project-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* background-color: #2A2A2A; */
+.project-item-container:hover .project-image-wrapper img {
+  transform: scale(1.05);
+}
 
 .project-item-description {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: #2a2a2a;
-  padding: 15px 15px;
-  gap: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  width: 360px;
+  padding: 20px;
+  gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
+  border-color: #141414;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
 }
 
 .item-desc-header {
-  height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -53,25 +66,141 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .project-item-description h3 {
   color: #fff;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
+  letter-spacing: -0.3px;
 }
 
-.item-desc-header img {
-  width: 16px;
-  height: 100%;
+.project-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-link img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* Invert the attach/link icon because its source SVG has fill="black" */
+.project-link.live-link img {
+  filter: brightness(0) invert(1);
 }
 
 .item-desc-text {
-  color: #fff;
-  font-size: 14px;
+  color: #a3a3a3;
+  font-size: 14.5px;
+  line-height: 1.55;
   margin: 0;
   word-wrap: break-word;
   overflow-wrap: break-word;
   width: 100%;
+}
+
+/* Clickable image wrapper styling */
+.project-preview-clickable {
+  cursor: pointer;
+}
+
+/* Image preview modal styling */
+.project-image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: modalFadeIn 0.25s ease-out;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 85%;
+  max-height: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: modalZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}
+
+.modal-close-btn {
+  all: unset;
+  position: absolute;
+  top: -45px;
+  right: 0;
+  color: #fff;
+  font-size: 38px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  transform: scale(1.15);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoomIn {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
