@@ -1,27 +1,45 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import iconLogo from '../assets/logoWhite.png'
 import './Header.css'
 
 export function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const sentinelRef = useRef(null);
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 10) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+        const sentinel = sentinelRef.current;
+        if (!sentinel) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setScrolled(!entry.isIntersecting);
+            },
+            {
+                threshold: [0],
+            }
+        );
+
+        observer.observe(sentinel);
+
+        return () => {
+            if (sentinel) {
+                observer.unobserve(sentinel);
             }
         };
-
-        window.addEventListener('scroll', handleScroll);
-        // Run handler on mount in case the page is already scrolled
-        handleScroll();
-
-        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return <>
+        <div 
+            ref={sentinelRef}
+            style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                height: '10px',
+                width: '100%',
+                pointerEvents: 'none'
+            }}
+        />
         <header className={scrolled ? 'scrolled' : ''}>
             <img src={iconLogo} />
             <div className="nav-bar">
