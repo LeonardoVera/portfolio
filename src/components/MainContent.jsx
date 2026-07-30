@@ -78,7 +78,7 @@ export function MainContent() {
             />
             <ProjectItem
               preview={patitasSanasPreview}
-              title="Patitas Sanas - Vet Maganment"
+              title="Patitas Sanas - Vet Management"
               githubLink="https://github.com/KevinBohorquez/PatitasSanas"
               liveLink="https://patitas-sanas-sigma.vercel.app"
               description="Plataforma web desarrollada en React que maneja la gestion de una clinica veterinaria, incluyendo manejo de servicios, gestion de pacientes y veterinarios, dashboards y manejo de estado financiero"
