@@ -34,7 +34,7 @@ export function MainContent() {
           <h1>Software Engineer</h1>
           <h2>Leonardo Vera</h2>
           <p>
-            Estudiante del 7mo ciclo de la carrera de Ingenieria de software
+            Estudiante del 8vo ciclo de la carrera de Ingenieria de software
             enfocado en el{" "}
             <span className="highlight">desarrollo web full stack</span> y
             entusiasta del <span className="highlight">diseño UI</span>
@@ -78,7 +78,7 @@ export function MainContent() {
             />
             <ProjectItem
               preview={patitasSanasPreview}
-              title="Patitas Sanas - Vet Maganment"
+              title="Patitas Sanas - Vet Management"
               githubLink="https://github.com/KevinBohorquez/PatitasSanas"
               liveLink="https://patitas-sanas-sigma.vercel.app"
               description="Plataforma web desarrollada en React que maneja la gestion de una clinica veterinaria, incluyendo manejo de servicios, gestion de pacientes y veterinarios, dashboards y manejo de estado financiero"
