@@ -13,9 +13,10 @@ import githubIcon from "../assets/techIcons/github.svg";
 import nextjsIcon from "../assets/techIcons/nextjs.webp";
 
 // Projects Previews imports
-import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.png";
-import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.png";
-import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.png";
+import patitasSanasPreview from "../assets/projectsPreviews/patitasSanas-preview.webp";
+import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.webp";
+import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.webp";
+import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.webp";
 
 import { Button } from "../components/UI/Button.jsx";
 import { TechItem } from "./TechItem.jsx";
@@ -34,7 +35,9 @@ export function MainContent() {
           <h2>Leonardo Vera</h2>
           <p>
             Estudiante del 7mo ciclo de la carrera de Ingenieria de software
-            enfocado en el <span className="highlight">desarrollo web full stack</span> y entusiasta del <span className="highlight">diseño UI</span>
+            enfocado en el{" "}
+            <span className="highlight">desarrollo web full stack</span> y
+            entusiasta del <span className="highlight">diseño UI</span>
           </p>
         </div>
         <div className="action-buttons">
@@ -72,6 +75,13 @@ export function MainContent() {
               githubLink="https://github.com/LeonardoVera/ACL-manager"
               liveLink="https://github.com/LeonardoVera/linux-acl"
               description="Aplicación desarrollada en React que facilita la gestión de permisos ACL en sistemas Linux, permitiendo a los usuarios administrar de manera eficiente el acceso a archivos y directorios de forma visual e intuitiva."
+            />
+            <ProjectItem
+              preview={patitasSanasPreview}
+              title="Patitas Sanas - Vet Maganment"
+              githubLink="https://github.com/KevinBohorquez/PatitasSanas"
+              liveLink="https://patitas-sanas-sigma.vercel.app"
+              description="Plataforma web desarrollada en React que maneja la gestion de una clinica veterinaria, incluyendo manejo de servicios, gestion de pacientes y veterinarios, dashboards y manejo de estado financiero"
             />
             <ProjectItem
               preview={ipLocationPreview}
