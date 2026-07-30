@@ -34,7 +34,7 @@ export function MainContent() {
           <h1>Software Engineer</h1>
           <h2>Leonardo Vera</h2>
           <p>
-            Estudiante del 7mo ciclo de la carrera de Ingenieria de software
+            Estudiante del 8vo ciclo de la carrera de Ingenieria de software
             enfocado en el{" "}
             <span className="highlight">desarrollo web full stack</span> y
             entusiasta del <span className="highlight">diseño UI</span>
