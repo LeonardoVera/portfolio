@@ -1,0 +1,11 @@
+---
+import './TechItem.css'
+
+
+interface Props { icon: string; name: string; }
+const { icon, name } = Astro.props;
+---
+<div class="tech-item-container">
+      <img loading="lazy" width="48" height="48" class='tech-item-img' src={icon} alt={name} />
+      <h3>{name}</h3>
+    </div>

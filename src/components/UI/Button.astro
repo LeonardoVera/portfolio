@@ -1,0 +1,6 @@
+---
+import './Button.css';
+interface Props { text: string; link: string; downloadName?: string; }
+const { text, link, downloadName } = Astro.props;
+---
+<a class="action-button" href={link} target={downloadName ? undefined : '_blank'} rel={downloadName ? undefined : 'noopener noreferrer'} download={downloadName}>{text}</a>

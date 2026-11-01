@@ -1,46 +1,45 @@
+---
 import "./MainContent.css";
 
 // Tecnologies Icons Imports
-import htmlIcon from "../assets/techIcons/html.svg";
-import cssIcon from "../assets/techIcons/css.svg";
-import javascriptIcon from "../assets/techIcons/javascript.svg";
-import reactIcon from "../assets/techIcons/react.svg";
-import nodejsIcon from "../assets/techIcons/nodejs.svg";
-import figmaIcon from "../assets/techIcons/figma.svg";
-import mysqlIcon from "../assets/techIcons/mysql.svg";
-import gitIcon from "../assets/techIcons/git.svg";
-import githubIcon from "../assets/techIcons/github.svg";
-import nextjsIcon from "../assets/techIcons/nextjs.webp";
+import htmlIcon from "../assets/techIcons/html.svg?url";
+import cssIcon from "../assets/techIcons/css.svg?url";
+import javascriptIcon from "../assets/techIcons/javascript.svg?url";
+import reactIcon from "../assets/techIcons/react.svg?url";
+import nodejsIcon from "../assets/techIcons/nodejs.svg?url";
+import figmaIcon from "../assets/techIcons/figma.svg?url";
+import mysqlIcon from "../assets/techIcons/mysql.svg?url";
+import gitIcon from "../assets/techIcons/git.svg?url";
+import githubIcon from "../assets/techIcons/github.svg?url";
+import nextjsIcon from "../assets/techIcons/nextjs.webp?url";
 
 // Projects Previews imports
-import patitasSanasPreview from "../assets/projectsPreviews/patitasSanas-preview.webp";
-import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.webp";
-import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.webp";
-import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.webp";
+import patitasSanasPreview from "../assets/projectsPreviews/patitasSanas-preview.webp?url";
+import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.webp?url";
+import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.webp?url";
+import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.webp?url";
 
-import { Button } from "../components/UI/Button.jsx";
-import { TechItem } from "./TechItem.jsx";
-import { ProjectItem } from "./ProjectItem.jsx";
-import { ExperienceItem } from "./ExperienceItem.jsx";
-import curriculum from "../assets/CV-LeonardoVera.pdf";
-import me from "../assets/me-icon.webp";
+import Button from "../components/UI/Button.astro";
+import TechItem from "./TechItem.astro";
+import ProjectItem from "./ProjectItem.astro";
+import ExperienceItem from "./ExperienceItem.astro";
+import curriculum from "../assets/CV-LeonardoVera.pdf?url";
+import me from "../assets/me-icon.webp?url";
 
-export function MainContent() {
-  return (
-    <>
-      <div className="container" id="home">
-        <div className="presentation">
-          <img src={me} />
-          <h1>Software Engineer</h1>
+---
+<main class="container" id="home">
+        <div class="presentation">
+          <img src={me} alt="Retrato de Leonardo Vera" width="230" height="230" fetchpriority="high" />
+          <h1>Software Engineer <span class="sr-only">&mdash; Leonardo Vera</span></h1>
           <h2>Leonardo Vera</h2>
           <p>
             Estudiante del 8vo ciclo de la carrera de Ingenieria de software
-            enfocado en el{" "}
-            <span className="highlight">desarrollo web full stack</span> y
-            entusiasta del <span className="highlight">diseño UI</span>
+            enfocado en el 
+            <span class="highlight">desarrollo web full stack</span> y
+            entusiasta del <span class="highlight">diseño UI</span>
           </p>
         </div>
-        <div className="action-buttons">
+        <div class="action-buttons">
           <Button
             text="Get in touch"
             link="https://www.linkedin.com/in/leonardovera20"
@@ -51,9 +50,9 @@ export function MainContent() {
             downloadName="CV Leonardo Vera.pdf"
           />
         </div>
-        <div className="tech-stack">
+        <div class="tech-stack">
           <h2>Tech Stack</h2>
-          <div className="tech-stack-items">
+          <div class="tech-stack-items">
             <TechItem icon={htmlIcon} name="HTML" />
             <TechItem icon={cssIcon} name="CSS" />
             <TechItem icon={javascriptIcon} name="JavaScript" />
@@ -66,9 +65,9 @@ export function MainContent() {
             <TechItem icon={figmaIcon} name="Figma" />
           </div>
         </div>
-        <div className="projects">
+        <div class="projects">
           <h2 id="projects">Projects</h2>
-          <div className="projects-items">
+          <div class="projects-items">
             <ProjectItem
               preview={linuxACLDemoPreview}
               title="Linux ACL Manager"
@@ -99,9 +98,9 @@ export function MainContent() {
             />
           </div>
         </div>
-        <div className="experience">
+        <div class="experience">
           <h2 id="experience">Experience</h2>
-          <div className="experience-items">
+          <div class="experience-items">
             <ExperienceItem
               title="Voluntariado IEEE Computer Society"
               date="May 2024 - Dic 2024"
@@ -117,7 +116,4 @@ export function MainContent() {
             />
           </div>
         </div>
-      </div>
-    </>
-  );
-}
+      </main>
