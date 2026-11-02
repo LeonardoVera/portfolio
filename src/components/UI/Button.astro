@@ -1,6 +1,6 @@
 ---
 import './Button.css';
-interface Props { text: string; link: string; downloadName?: string; }
-const { text, link, downloadName } = Astro.props;
+interface Props { text: string; link: string; downloadName?: string; outline?: boolean; }
+const { text, link, downloadName, outline = false } = Astro.props;
 ---
-<a class="action-button" href={link} target={downloadName ? undefined : '_blank'} rel={downloadName ? undefined : 'noopener noreferrer'} download={downloadName}>{text}</a>
+<a class:list={['action-button', { 'action-button-outline': outline }]} href={link} download={downloadName}>{text}</a>

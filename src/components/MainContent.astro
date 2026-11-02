@@ -1,7 +1,6 @@
 ---
 import "./MainContent.css";
-
-// Tecnologies Icons Imports
+import Publications from "./Publications.astro";
 import htmlIcon from "../assets/techIcons/html.svg?url";
 import cssIcon from "../assets/techIcons/css.svg?url";
 import javascriptIcon from "../assets/techIcons/javascript.svg?url";
@@ -12,108 +11,145 @@ import mysqlIcon from "../assets/techIcons/mysql.svg?url";
 import gitIcon from "../assets/techIcons/git.svg?url";
 import githubIcon from "../assets/techIcons/github.svg?url";
 import nextjsIcon from "../assets/techIcons/nextjs.webp?url";
-
-// Projects Previews imports
 import patitasSanasPreview from "../assets/projectsPreviews/patitasSanas-preview.webp?url";
 import gastosPreview from "../assets/projectsPreviews/guardian-gastos-preview.webp?url";
 import ipLocationPreview from "../assets/projectsPreviews/ipLocation-preview.webp?url";
 import linuxACLDemoPreview from "../assets/projectsPreviews/linux-acl-preview.webp?url";
-
-import Button from "../components/UI/Button.astro";
+import Button from "./UI/Button.astro";
 import TechItem from "./TechItem.astro";
 import ProjectItem from "./ProjectItem.astro";
 import ExperienceItem from "./ExperienceItem.astro";
 import curriculum from "../assets/CV-LeonardoVera.pdf?url";
 import me from "../assets/me-icon.webp?url";
-
 ---
-<main class="container" id="home">
-        <div class="presentation">
-          <img src={me} alt="Retrato de Leonardo Vera" width="230" height="230" fetchpriority="high" />
-          <h1>Software Engineer <span class="sr-only">&mdash; Leonardo Vera</span></h1>
-          <h2>Leonardo Vera</h2>
-          <p>
-            Estudiante del 8vo ciclo de la carrera de Ingenieria de software
-            enfocado en el{" "}
-            <span class="highlight">desarrollo web full stack</span> y
-            entusiasta del <span class="highlight">diseño UI</span>
-          </p>
-        </div>
-        <div class="action-buttons">
-          <Button
-            text="Get in touch"
-            link="https://www.linkedin.com/in/leonardovera20"
-          />
-          <Button
-            text="Download CV"
-            link={curriculum}
-            downloadName="CV Leonardo Vera.pdf"
-          />
-        </div>
-        <div class="tech-stack">
-          <h2>Tech Stack</h2>
-          <div class="tech-stack-items">
-            <TechItem icon={htmlIcon} name="HTML" />
-            <TechItem icon={cssIcon} name="CSS" />
-            <TechItem icon={javascriptIcon} name="JavaScript" />
-            <TechItem icon={reactIcon} name="React" />
-            <TechItem icon={nextjsIcon} name="Next.js" />
-            <TechItem icon={nodejsIcon} name="Node.js" />
-            <TechItem icon={gitIcon} name="Git" />
-            <TechItem icon={githubIcon} name="GitHub" />
-            <TechItem icon={mysqlIcon} name="MySQL" />
-            <TechItem icon={figmaIcon} name="Figma" />
-          </div>
-        </div>
-        <div class="projects">
-          <h2 id="projects">Projects</h2>
-          <div class="projects-items">
-            <ProjectItem
-              preview={linuxACLDemoPreview}
-              title="Linux ACL Manager"
-              githubLink="https://github.com/LeonardoVera/ACL-manager"
-              liveLink="https://github.com/LeonardoVera/ACL-manager"
-              description="Aplicación desarrollada en React que facilita la gestión de permisos ACL en sistemas Linux, permitiendo a los usuarios administrar de manera eficiente el acceso a archivos y directorios de forma visual e intuitiva."
-            />
-            <ProjectItem
-              preview={patitasSanasPreview}
-              title="Patitas Sanas - Vet Management"
-              githubLink="https://github.com/KevinBohorquez/PatitasSanas"
-              liveLink="https://patitas-sanas-sigma.vercel.app"
-              description="Plataforma web desarrollada en React que maneja la gestion de una clinica veterinaria, incluyendo manejo de servicios, gestion de pacientes y veterinarios, dashboards y manejo de estado financiero"
-            />
-            <ProjectItem
-              preview={ipLocationPreview}
-              title="Localizador via IP address"
-              githubLink="https://github.com/LeonardoVera/"
-              liveLink="https://ipaddresslocation.netlify.app/"
-              description="App desarrollada en react, la cual realiza una peticion y obtiene datos de geolocalizacion mediante la ip y las muestra en una interfaz amigable."
-            />
-            <ProjectItem
-              preview={gastosPreview}
-              title="Gestor de Gastos"
-              githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
-              liveLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
-              description="App desarrollada en react, la cual tiene como proposito ayudarte a gestionar tus gastos y obtener un balance general de estos mediante una grafica."
-            />
-          </div>
-        </div>
-        <div class="experience">
-          <h2 id="experience">Experience</h2>
-          <div class="experience-items">
-            <ExperienceItem
-              title="Voluntariado IEEE Computer Society"
-              date="May 2024 - Dic 2024"
-              desc="Fui encargado de la planeacion y documentacion de proyectos
-                            lo que me aporto enormemente en desarrollar mi capacidad de 
-                            trabajo en equipo."
-            />
-            <ExperienceItem
-              title="Voluntariado en Soporte y Mantenimiento Tecnologico"
-              date="Ago 2025 - Dic 2025"
-              desc="Participe como organizacor en el Proyecto dee Responsabilidad Social de la UNMSM, enfocado en el
-              fortalecimiento de la infraestructura tecnologica de la I.E. 1148 Juana Infantes Vera"
-            />
-          </div>
-        </div>
-      </main>
+<main class="container shell" id="home" tabindex="-1">
+  <section class="presentation" aria-labelledby="intro-title">
+    <div class="hero-art">
+      <img src={me} alt="Ilustración de un desarrollador en su espacio de trabajo" width="1784" height="2022" fetchpriority="high" />
+    </div>
+    <div class="hero-copy">
+      <h1 id="intro-title">Software Engineer<span class="sr-only"> — Leonardo Vera</span></h1>
+      <p class="hero-name">Leonardo Vera</p>
+      <p class="hero-description">Estudiante de Ingeniería de Software en la UNMSM, enfocado en crear aplicaciones web y diseñar interfaces fáciles de usar.</p>
+      <div class="action-buttons">
+        <Button text="Ver proyectos" link="#projects" />
+        <Button text="Descargar CV" link={curriculum} downloadName="CV Leonardo Vera.pdf" outline />
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-stack" aria-labelledby="tech-title">
+    <div class="tech-intro" data-reveal>
+      <h2 id="tech-title">Tecnologías</h2>
+      <p>Herramientas con las que trabajo en desarrollo web, control de versiones y diseño de interfaces.</p>
+    </div>
+    <div class="tech-stack-items" data-reveal-group>
+      <TechItem icon={htmlIcon} name="HTML" />
+      <TechItem icon={cssIcon} name="CSS" />
+      <TechItem icon={javascriptIcon} name="JavaScript" />
+      <TechItem icon={reactIcon} name="React" />
+      <TechItem icon={nextjsIcon} name="Next.js" />
+      <TechItem icon={nodejsIcon} name="Node.js" />
+      <TechItem icon={gitIcon} name="Git" />
+      <TechItem icon={githubIcon} name="GitHub" />
+      <TechItem icon={mysqlIcon} name="MySQL" />
+      <TechItem icon={figmaIcon} name="Figma" />
+    </div>
+  </section>
+
+  <section class="projects" id="projects" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title" data-reveal>Proyectos</h2>
+    </div>
+    <div class="projects-items" data-reveal-group>
+      <ProjectItem
+        preview={linuxACLDemoPreview}
+        title="Linux ACL Manager"
+        githubLink="https://github.com/LeonardoVera/ACL-manager"
+        description="Gestión visual de permisos ACL en Linux. Una aplicación en React para administrar el acceso a archivos y directorios."
+      />
+      <ProjectItem
+        preview={patitasSanasPreview}
+        title="Patitas Sanas"
+        githubLink="https://github.com/KevinBohorquez/PatitasSanas"
+        liveLink="https://patitas-sanas-sigma.vercel.app"
+        description="Gestión de una clínica veterinaria con React: pacientes, veterinarios, servicios y seguimiento del estado financiero."
+      />
+      <ProjectItem
+        preview={ipLocationPreview}
+        title="Localizador de IP"
+        liveLink="https://ipaddresslocation.netlify.app/"
+        description="Consulta de geolocalización a partir de una dirección IP. Desarrollada en React para mostrar los datos de ubicación en una sola vista."
+      />
+      <ProjectItem
+        preview={gastosPreview}
+        title="Gestor de Gastos"
+        githubLink="https://github.com/MiguelTacoZavala/Sistema_Gestion_Gastos"
+        description="Registro y seguimiento de gastos con React. Un resumen gráfico permite consultar el balance y la distribución por categorías."
+      />
+    </div>
+  </section>
+
+  <section class="experience" id="experience" aria-labelledby="experience-title">
+    <h2 id="experience-title" data-reveal>Experiencia</h2>
+    <div class="experience-items" data-reveal-group>
+      <ExperienceItem
+        title="Soporte tecnológico"
+        date="Ago 2025 – Dic 2025"
+        desc="Organización del Proyecto de Responsabilidad Social de la UNMSM, enfocado en fortalecer la infraestructura tecnológica de la I.E. 1148 Juana Infantes Vera."
+      />
+      <ExperienceItem
+        title="IEEE Computer Society"
+        date="May 2024 – Dic 2024"
+        desc="Voluntariado en planeación y documentación de proyectos. Una experiencia para desarrollar mi capacidad de colaboración y trabajo en equipo."
+      />
+    </div>
+  </section>
+
+  <section class="education" id="education" aria-labelledby="education-title">
+    <h2 id="education-title" data-reveal>Educación</h2>
+    <article class="education-item" data-reveal>
+      <span class="education-status">En curso</span>
+      <div class="education-details">
+        <h3>Ingeniería de Software</h3>
+        <p class="education-degree">Grado universitario</p>
+        <p>Universidad Nacional Mayor de San Marcos</p>
+      </div>
+      <p class="education-dates"><time datetime="2023">2023</time>–<time datetime="2027">2027</time></p>
+    </article>
+  </section>
+  <Publications />
+</main>
+
+<script>
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!motionPreference.matches && 'IntersectionObserver' in window) {
+    const elements = [...document.querySelectorAll<HTMLElement>('[data-reveal]')];
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    }, { rootMargin: '0px 0px -48px 0px', threshold: 0 });
+
+    document.querySelectorAll('[data-reveal-group]').forEach((group) => {
+      group.querySelectorAll<HTMLElement>('[data-reveal]').forEach((element, index) => {
+        element.style.setProperty('--reveal-delay', (index % 2) * 70 + 'ms');
+      });
+    });
+
+    elements.forEach((element) => {
+      // Keep the first screen and restored scroll positions readable immediately.
+      if (element.getBoundingClientRect().top < window.innerHeight) return;
+      element.classList.add('reveal-pending');
+      observer.observe(element);
+    });
+
+    motionPreference.addEventListener('change', (event) => {
+      if (!event.matches) return;
+      observer.disconnect();
+      elements.forEach((element) => element.classList.remove('reveal-pending'));
+    });
+  }
+</script>

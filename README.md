@@ -1,6 +1,6 @@
 # Portafolio de Leonardo Vera
 
-Sitio estatico hecho con Astro y TypeScript estricto. Los componentes `.astro` generan el contenido durante el build; solo la cabecera y las vistas ampliadas usan JavaScript en el navegador.
+Sitio estatico hecho con Astro y TypeScript estricto. Los componentes `.astro` generan el contenido durante el build; la cabecera, las entradas de secciones y las vistas ampliadas usan JavaScript en el navegador.
 
 ## Desarrollo
 

@@ -45,6 +45,16 @@ test('navigation anchors and local assets resolve', async () => {
   }
 });
 
+test('the production build preserves the standard glass header filter', async () => {
+  const stylesheets = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"/g)];
+  assert.ok(stylesheets.length, 'The page must load its stylesheet');
+  const styles = await Promise.all(stylesheets.map(([, href]) => readFile(resolve('dist', href.slice(1)), 'utf8')));
+  // The CSS minifier drops the standard property when the prefixed declaration comes last.
+  const headerRule = styles.join('\n').match(/\.site-header\.scrolled\s*\{([^}]+)\}/)?.[1];
+  assert.ok(headerRule, 'Missing scrolled header styles');
+  assert.match(headerRule, /(?:^|;)\s*backdrop-filter:\s*blur\(/, 'Chrome needs the unprefixed property after minification');
+});
+
 test('robots and sitemap allow discovery of the canonical page', async () => {
   const robots = await readFile('dist/robots.txt', 'utf8');
   assert.ok(robots.includes('User-agent: *\nAllow: /'));

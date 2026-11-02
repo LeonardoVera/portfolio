@@ -5,7 +5,7 @@ import './TechItem.css'
 interface Props { icon: string; name: string; }
 const { icon, name } = Astro.props;
 ---
-<div class="tech-item-container">
-      <img loading="lazy" width="48" height="48" class='tech-item-img' src={icon} alt={name} />
+<div class="tech-item-container" data-reveal>
+      <img loading="lazy" width="56" height="56" class:list={['tech-item-img', { 'tech-item-img-inverted': name === 'Next.js' }]} src={icon} alt="" />
       <h3>{name}</h3>
     </div>

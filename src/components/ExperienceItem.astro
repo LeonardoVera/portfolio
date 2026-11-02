@@ -5,7 +5,7 @@ import './ExperienceItem.css'
 interface Props { title: string; date: string; desc: string; }
 const { title, date, desc } = Astro.props;
 ---
-<div class="experience-item-container">
+<div class="experience-item-container" data-reveal>
             <div class="experience-item-header">
                 <h3>{title}</h3>
                 <span class="experience-date">{date}</span>

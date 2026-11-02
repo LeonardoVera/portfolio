@@ -1,0 +1,39 @@
+.publications { margin-top: 112px; }
+.publications h2 { font-size: clamp(32px, 3.4vw, 48px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.1; }
+.publication { display: grid; grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.5fr); align-items: center; gap: 72px; margin-top: 48px; }
+.publication-cover { margin: 0; min-width: 0; text-align: center; }
+.publication-book {
+  display: block; position: relative; width: min(100% - 16px, 280px); margin-inline: auto;
+  border-radius: 3px 8px 8px 3px; background: var(--surface);
+  border-left: 8px solid #004f45;
+  transform: perspective(1000px) rotateY(-9deg);
+  transition: transform 250ms var(--ease-out);
+}
+.publication-book::after { content: ''; position: absolute; inset: 5px -9px 5px auto; width: 8px; background: #d6d8d1; border-radius: 0 4px 4px 0; z-index: -1; }
+.publication-book img { width: 100%; height: auto; border-radius: 0 6px 6px 0; }
+.publication-cover figcaption { margin-top: 24px; color: var(--muted); font-size: 16px; }
+.publication-details h3 { font-size: 24px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.3; text-wrap: pretty; }
+.publication-byline { margin-top: 20px; }
+.publication-byline strong { font-weight: 600; }
+.publication-summary { max-width: 60ch; margin-top: 20px; }
+.publication-metadata { display: grid; gap: 12px; margin: 24px 0 0; font-size: 16px; }
+.publication-metadata > div { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; }
+.publication-metadata dt { color: var(--muted); }
+.publication-metadata dd { margin: 0; }
+.publication-doi { margin-top: 20px; font-size: 16px; overflow-wrap: anywhere; }
+.publication-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; }
+.publication-authors { margin-top: 20px; font-size: 16px; }
+.publication-authors summary { width: fit-content; padding-block: 10px; cursor: pointer; }
+.publication-authors p { margin-top: 8px; max-width: 65ch; }
+@media (hover: hover) and (pointer: fine) {
+  .publication-book:hover { transform: perspective(1000px) rotateY(-3deg) translateY(-3px); }
+  .publication-authors summary:hover { color: var(--accent); }
+}
+@media (max-width: 900px) { .publication { gap: 40px; } }
+@media (max-width: 700px) {
+  .publications { margin-top: 80px; }
+  .publication { grid-template-columns: 1fr; gap: 40px; margin-top: 32px; }
+  .publication-book { width: 220px; }
+  .publication-details h3 { font-size: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { .publication-book { transform: none; } .publication-book:hover { transform: none; } }
