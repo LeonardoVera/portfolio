@@ -1,23 +1,29 @@
----
-import iconLogo from '../assets/logoWhite.png?url';
-import './Header.css';
----
-<div id="header-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;height:10px;width:100%;pointer-events:none"></div>
-<header>
-  <img src={iconLogo} alt="Logo de Leonardo Vera" width="80" height="80" />
-  <nav class="nav-bar" aria-label="Navegación principal">
-    <a href="#home" class="nav-bar-item">Home</a>
-    <a href="#projects" class="nav-bar-item">Projects</a>
-    <a href="#experience" class="nav-bar-item">Experience</a>
-    <a href="#contact" class="nav-bar-item">Contact</a>
-  </nav>
-</header>
-<script>
-  const sentinel = document.querySelector('#header-sentinel');
-  const header = document.querySelector('header');
-  if (sentinel && header) {
-    new IntersectionObserver(([entry]) => {
-      if (entry) header.classList.toggle('scrolled', !entry.isIntersecting);
-    }).observe(sentinel);
-  }
-</script>
+---
+import iconLogo from '../assets/logoWhite.png?url';
+import './Header.css';
+---
+<div id="header-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:10px;height:10px;pointer-events:none"></div>
+<header class="site-header">
+  <div class="header-inner shell">
+    <a class="brand" href="#home" aria-label="Leonardo Vera, inicio">
+      <img src={iconLogo} alt="" width="56" height="56" />
+    </a>
+    <nav class="nav-bar" aria-label="Navegación principal">
+      <a href="#projects">Proyectos</a>
+      <a href="#experience">Experiencia</a>
+      <a href="#education">Educación</a>
+      <a href="#publications">Publicaciones</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const sentinel = document.querySelector('#header-sentinel');
+  const header = document.querySelector('.site-header');
+  if (sentinel && header) {
+    new IntersectionObserver(([entry]) => {
+      if (entry) header.classList.toggle('scrolled', !entry.isIntersecting);
+    }).observe(sentinel);
+  }
+</script>

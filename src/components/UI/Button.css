@@ -1,34 +1,23 @@
 .action-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: 2px outset buttonborder;
-    background-color: #fff;
-    color: #161513;
-    font-family: Poppins;
-    font-weight: bold;
-    font-size: 21.38px;
-
-    width: 195px;
-    height: 64px;
-
-    border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 12px 24px;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 140ms var(--ease-out), background-color 180ms ease, border-color 180ms ease;
 }
-
-.action-button:hover {
-    cursor: pointer;
-    background-color: #161513;
-    color: #fff;
-    stroke: #fff;
-    stroke-width: 8px;
+.action-button-outline { background: transparent; border-color: var(--control-border); color: var(--text); }
+.action-button:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) {
+  .action-button:hover { background: var(--text); border-color: var(--text); color: var(--bg); }
+  .action-button-outline:hover { background: var(--surface-hover); border-color: var(--accent); color: var(--accent); }
 }
-
-@media (max-width: 500px) {
-    .action-button {
-        width: 150px;
-        height: 50px;
-        font-size: 16px;
-    }
-}
+@media (max-width: 359px) { .action-button { padding-inline: 18px; } }
