@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import cover from '../assets/publications/veritas-v7n3.png';
+import './Publications.css';
+---
+<section class="publications" id="publications" aria-labelledby="publications-title">
+  <h2 id="publications-title" data-reveal>Publicaciones</h2>
+  <article class="publication">
+    <figure class="publication-cover" data-reveal>
+      <a class="publication-book" href="https://revistaveritas.org/index.php/veritas/article/view/1883" target="_blank" rel="noopener noreferrer" aria-label="Leer el artículo en Revista Veritas (abre en otra pestaña)">
+        <Image src={cover} width={560} format="webp" quality={85} alt="Portada de Revista Veritas, volumen 7, número 3, 2026" loading="lazy" />
+      </a>
+      <figcaption>Revista Veritas · Vol. 7, núm. 3</figcaption>
+    </figure>
+    <div class="publication-details" data-reveal>
+      <h3>Madurez Tecnológica Organizacional en Aplicaciones Móviles para Atención Médica de Emergencia</h3>
+      <p class="publication-byline">Coautor: <strong>Leonardo Vera</strong></p>
+      <p class="publication-summary">Estudio de caso sobre MediRecord, una aplicación móvil de ficha médica de emergencia, centrado en la seguridad de la información y la continuidad operacional.</p>
+      <dl class="publication-metadata">
+        <div><dt>Revista</dt><dd>Revista Veritas de Difusão Científica</dd></div>
+        <div><dt>Publicado</dt><dd><time datetime="2026-10-26">26 de octubre de 2026</time></dd></div>
+        <div><dt>Edición</dt><dd>Vol. 7, núm. 3, pp. 586–595</dd></div>
+      </dl>
+      <p class="publication-doi">DOI: <a href="https://doi.org/10.61616/rvdc.v7i3.1883" target="_blank" rel="noopener noreferrer">10.61616/rvdc.v7i3.1883<span class="sr-only"> (abre en otra pestaña)</span></a></p>
+      <div class="publication-actions">
+        <a class="action-button" href="https://revistaveritas.org/index.php/veritas/article/view/1883" target="_blank" rel="noopener noreferrer">Leer artículo<span class="sr-only"> (abre en otra pestaña)</span></a>
+        <a class="action-button action-button-outline" href="https://revistaveritas.org/index.php/veritas/article/download/1883/3568" target="_blank" rel="noopener noreferrer">Ver PDF<span class="sr-only"> (abre en otra pestaña)</span></a>
+      </div>
+      <details class="publication-authors">
+        <summary>Autoría completa</summary>
+        <p>Víctor Hugo Alfaro Yangali, Judith Maritza Ochoa Garmendia, David Joel Aldana Chávez, Lita Huanca Tapia, Leonardo Vera y Vanesa Cris Alfaro Huamani.</p>
+      </details>
+    </div>
+  </article>
+</section>

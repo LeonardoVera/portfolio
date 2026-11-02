@@ -1,0 +1,6 @@
+---
+import './Button.css';
+interface Props { text: string; link: string; downloadName?: string; outline?: boolean; }
+const { text, link, downloadName, outline = false } = Astro.props;
+---
+<a class:list={['action-button', { 'action-button-outline': outline }]} href={link} download={downloadName}>{text}</a>

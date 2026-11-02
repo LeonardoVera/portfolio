@@ -9,7 +9,6 @@ lerna-debug.log*
 
 # Dependencies
 node_modules
-package-lock.json
 yarn.lock
 pnpm-lock.yaml
 
@@ -56,3 +55,7 @@ Thumbs.db
 .cache
 .eslintcache
 .stylelintcache
+
+# Astro generated types
+.astro/
+.taste-skill/

@@ -1,65 +1,15 @@
 .experience-item-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(4px);
-    border-radius: 16px;
-    padding: 20px 24px;
-    margin: 15px 0;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-                background-color 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.3s ease;
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--panel-border);
+  border-radius: 24px;
+  transition: background-color 180ms ease, border-color 180ms ease;
 }
-
-.experience-item-container:hover {
-    transform: translateY(-3px);
-    background-color: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+.experience-item-header { display: flex; flex-direction: column; gap: 16px; }
+.experience-item-header h3 { font-size: 24px; font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; }
+.experience-date { font-size: 16px; color: var(--muted); }
+.experience-desc { margin-top: 24px; font-size: 18px; }
+@media (hover: hover) and (pointer: fine) {
+  .experience-item-container:hover { background: var(--surface-hover); border-color: var(--panel-border-hover); }
 }
-
-.experience-item-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 12px;
-    margin-bottom: 12px;
-
-    @media (max-width: 600px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-}
-
-.experience-item-header h3 {
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    margin: 0;
-}
-
-.experience-date {
-    font-size: 13.5px;
-    font-weight: 600;
-    color: #f9c441;
-    background-color: rgba(249, 196, 65, 0.1);
-    border: 1px solid rgba(249, 196, 65, 0.2);
-    padding: 4px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-}
-
-.experience-desc {
-    color: #a3a3a3;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-}
+@media (max-width: 700px) { .experience-item-container { padding: 24px; } }

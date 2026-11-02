@@ -1,0 +1,32 @@
+---
+import './Footer.css';
+import emailIcon from '../assets/contactIcons/email.svg?url';
+import linkedinIcon from '../assets/contactIcons/linkedin.svg?url';
+import githubIcon from '../assets/techIcons/github.svg?url';
+---
+<footer id="contact" aria-labelledby="contact-title">
+  <div class="content">
+    <div class="footer-info" data-reveal>
+      <h2 id="contact-title">Contacto</h2>
+      <p>Puedes contactar conmigo a través de los siguientes correos o mediante mis redes sociales.</p>
+      <div class="social-items">
+        <a href="https://www.linkedin.com/in/leonardovera20/" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre en otra pestaña)">
+          <img src={linkedinIcon} alt="" width="18" height="18" />
+        </a>
+        <a href="https://www.github.com/LeonardoVera/" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="GitHub (abre en otra pestaña)">
+          <img src={githubIcon} alt="" width="18" height="18" />
+        </a>
+      </div>
+    </div>
+    <div class="footer-contacts" data-reveal>
+      <a href="mailto:leonardovera20037@gmail.com" class="email-item">
+        <img src={emailIcon} alt="" width="18" height="18" />
+        <span>leonardovera20037@gmail.com</span>
+      </a>
+      <a href="mailto:cristian.vera@unmsm.edu.pe" class="email-item">
+        <img src={emailIcon} alt="" width="18" height="18" />
+        <span>cristian.vera@unmsm.edu.pe</span>
+      </a>
+    </div>
+  </div>
+</footer>

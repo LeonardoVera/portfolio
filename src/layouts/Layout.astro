@@ -1,0 +1,96 @@
+---
+
+import '../index.css';
+
+import portrait from '../assets/me-icon.webp?url';
+
+const title = 'Leonardo Vera | Software Engineer · Desarrollo web full stack';
+
+const description = 'Portafolio de Leonardo Vera, estudiante de Ingeniería de Software enfocado en desarrollo web full stack y diseño UI. Conoce mis proyectos y experiencia.';
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const image = new URL(portrait, Astro.site);
+
+const person = {
+
+  '@context': 'https://schema.org',
+
+  '@type': 'Person',
+
+  name: 'Leonardo Vera',
+
+  url: Astro.site?.href,
+
+  image: image.href,
+
+  description,
+
+  sameAs: ['https://github.com/LeonardoVera', 'https://www.linkedin.com/in/leonardovera20/'],
+
+};
+
+---
+
+<!doctype html>
+
+<html lang="es">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{title}</title>
+
+    <meta name="description" content={description} />
+
+    <meta name="author" content="Leonardo Vera" />
+
+    <meta name="theme-color" content="#161513" />
+
+    <link rel="icon" type="image/png" href="/icon.png" />
+
+    <link rel="canonical" href={canonical} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:locale" content="es_PE" />
+
+    <meta property="og:site_name" content="Leonardo Vera" />
+
+    <meta property="og:title" content={title} />
+
+    <meta property="og:description" content={description} />
+
+    <meta property="og:url" content={canonical} />
+
+    <meta property="og:image" content={image} />
+
+    <meta property="og:image:alt" content="Ilustración del portafolio de Leonardo Vera" />
+
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="twitter:title" content={title} />
+
+    <meta name="twitter:description" content={description} />
+
+    <meta name="twitter:image" content={image} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(person).replace(/</g, '\\u003c')} />
+
+  </head>
+
+  <body>
+
+    <a class="skip-link" href="#home">Saltar al contenido</a>
+
+    <slot />
+
+  </body>
+
+</html>
+
