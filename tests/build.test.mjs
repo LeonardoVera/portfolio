@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import test from 'node:test';
 
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
-const origin = 'https://leonardovera.netlify.app';
+const origin = 'https://leonardovera.dev';
 
 test('content is present without running JavaScript', () => {
   assert.match(html, /<html lang="es"/);
