@@ -4,3 +4,9 @@
 
 [build.environment]
   NODE_VERSION = "22.23.4"
+
+[[redirects]]
+  from = "https://leonardovera.netlify.app/*"
+  to = "https://leonardovera.dev/:splat"
+  status = 301
+  force = true
